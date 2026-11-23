@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/values-es/strings.xml -->
+<resources>
+    <string name="app_name">Mi Aplicación</string>
+    <string name="reset">Reiniciar</string>
+    <string name="deduction">Deducción</string>
+    <string name="gymnastics_app">Aplicación de Gimnasia</string>
+    <string name="perform">Realizar</string>
+    <string name="scoreView">Puntuación actual: %1$d</string>
+    <string name="elementView">Elemento actual: %1$d</string>
+    <string name="highscoreView">Récord: %1$d</string>
+    <string name="previousScoreView">Puntuación anterior: %1$d</string>
+    <string name="completeView">¡Rutina completada! Puntuación final: %1$d</string>
+</resources>

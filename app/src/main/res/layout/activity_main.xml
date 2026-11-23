@@ -1,104 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp"
-        app:layout_constraintTop_toTopOf="parent">
-    <TextView
-        android:layout_width="303dp"
-        android:layout_height="69dp"
-        android:text="@string/gymnastics_app"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.073" />
+        android:padding="16dp">
 
-    <TextView
-        android:id="@+id/previousScoreView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:text="@string/previousScoreView"
-        tools:layout_editor_absoluteX="416dp"
-        tools:layout_editor_absoluteY="214dp" />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="@string/gymnastics_app"
+            android:textSize="34sp" />
 
-    <TextView
-        android:id="@+id/highscoreView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
+        <TextView
+            android:id="@+id/completeView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/completeView"
+            android:textSize="24sp"
+            android:visibility="gone" />
 
-        android:text="@string/highscoreView"
-        tools:layout_editor_absoluteX="416dp"
-        tools:layout_editor_absoluteY="138dp" />
+        <TextView
+            android:id="@+id/elementView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:text="@string/elementView"
+            android:textSize="20sp" />
 
-    <TextView
-        android:id="@+id/scoreView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:autofillHints=""
-        android:ems="10"
-        android:text="@string/scoreView"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="214dp" />
+        <TextView
+            android:id="@+id/scoreView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="@string/scoreView"
+            android:textSize="20sp" />
 
-    <TextView
-        android:id="@+id/elementView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:text="@string/elementView"
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="138dp" />
+        <TextView
+            android:id="@+id/highscoreView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="@string/highscoreView"
+            android:textSize="20sp" />
 
-    <Button
-        android:id="@+id/Reset"
-        android:layout_width="135sp"
-        android:layout_height="67sp"
-        android:onClick="resetButtonPress"
-        android:text="@string/reset"
-        android:textColorLink="#FF5722"
-        app:backgroundTint="#FAA500"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/Deduction"
-        tools:layout_editor_absoluteY="306sp" />
+        <TextView
+            android:id="@+id/previousScoreView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="@string/previousScoreView"
+            android:textSize="20sp" />
 
-    <Button
-        android:id="@+id/Deduction"
-        android:layout_width="134dp"
-        android:layout_height="66dp"
-        android:onClick="deductionButtonPress"
-        android:text="@string/deduction"
-        android:textColorLink="#FF0000"
-        app:backgroundTint="#FF0000"
-        app:iconTint="#F44336"
-        tools:layout_editor_absoluteX="298dp"
-        tools:layout_editor_absoluteY="307dp" />
 
-    <Button
-        android:id="@+id/Perform"
-        android:layout_width="158dp"
-        android:layout_height="66dp"
-        android:background="#07F01D"
-        android:onClick="performButtonPress"
-        android:text="@string/perform"
-        app:backgroundTint="#4CAF50"
-        tools:layout_editor_absoluteX="75dp"
-        tools:layout_editor_absoluteY="307dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/Perform"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:onClick="performButtonPress"
+                android:text="@string/perform"
+                app:backgroundTint="#4CAF50" />
+
+            <Button
+                android:id="@+id/Deduction"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:onClick="deductionButtonPress"
+                android:text="@string/deduction"
+                app:backgroundTint="#FF0000" />
+
+            <Button
+                android:id="@+id/Reset"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:onClick="resetButtonPress"
+                android:text="@string/reset"
+                app:backgroundTint="#FAA500" />
+        </LinearLayout>
     </LinearLayout>
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
